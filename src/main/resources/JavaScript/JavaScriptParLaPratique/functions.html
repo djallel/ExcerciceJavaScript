@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript parla pratique</title>
+</head>
+<body>
+
+<button id="btn">bouton</button>
+<script>
+    //function declaration
+    function greet(firstname) {
+        console.log("coucou " + firstname);
+        return true;
+
+    }
+
+    greet('djallel')
+
+    //function expression
+    var greeting = function greeting2(firstname) {
+        console.log("Hi " + firstname);
+        return true;
+    }
+
+    greeting("djallel2")
+
+    // function callback
+
+    function salutation(name) {
+        alert('Bonjour ' + name);
+    }
+
+    function processUserInput(callback) {
+        var name = prompt('Entrez votre nom.');
+        callback(name);
+    }
+
+    processUserInput(salutation);
+
+    // function callback 2
+
+    var btnGreet = document.querySelector('#btn');
+    // anonymous function passée en callback  de la fonction addEventListener
+    btnGreet.addEventListener('click', function () {
+        console.log(`Au revoir click`);
+    });
+
+    // IIFE
+    var kaka= 9;
+    var result = (function () {
+        var name = "Barry";
+        return name;
+    })(kaka);
+    // Crée immédiatement la sortie:
+    console.log(result); // "Barry"
+
+        // IIFE with arrow
+    var result = ( () => {
+        var name = "Barry";
+        return name;
+    })(kaka);
+    // Crée immédiatement la sortie:
+    console.log(result); // "Barry"
+
+
+    // fonction par constructeur ( generalement il faudrait un début de nom en majuscule )
+
+    function TestAvecConstructeur(a,b,c,d,e,f) {
+
+    }
+
+    const test= new TestAvecConstructeur(1,2,3,4,5,6) ;
+
+
+    
+
+</script>
+</body>
+</html>

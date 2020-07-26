@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+<div>
+<!--    <video controls>-->
+
+<!--        <source src="./videos/Blake.mp4" id="player1" class="video-medium"-->
+<!--                type="video/mp4">-->
+
+<!--        Sorry, your browser doesn't support embedded videos.-->
+<!--    </video>-->
+
+    <video src="./videos/Blake.mp4" id="player" class="video-medium"></video>
+    <input type="range" id="speedslider" min="0.5" max="2" value="1" step="0.1" class="vertical">
+    <span id="speed">1X</span>
+</div>
+<div id="controls">
+    <button id="btnPlay">play</button>
+    <button id="btnStop">stop</button>
+    chercher <input type="range" step="1" id="seekbar" value="0">
+</div>
+<script>
+    const player = document.querySelector('#player');
+    const speedslider = document.querySelector('#speedslider');
+    const speed = document.querySelector('#speed');
+    const btnPlay = document.querySelector('#btnPlay');
+    const btnStop = document.querySelector('#btnStop');
+    const videoDuration = player.duration;
+
+    const seekbar = document.querySelector('#seekbar');
+
+    btnPlay.addEventListener("click", playVideo);
+    btnStop.addEventListener("click", stopVideo);
+    speedslider.addEventListener('change', adjustSpeed);
+
+
+    player.addEventListener('durationchange', setupSeekbar);
+    player.addEventListener('canplay', setUpPlayer);
+    player.addEventListener('ended', clean);
+
+    seekbar.addEventListener('change', seekVideo);
+    seekbar.addEventListener('timeupdate', updateUI);
+
+    function clean() {
+
+        if (player.paused){
+            btnPlay.innerText='play'
+        }
+
+    }
+    function setUpPlayer() {
+        setupSeekbar();
+        player.volume= 0.5;
+    }
+
+    function updateUI() {
+        seekbar.value= video.currentTime;
+    }
+
+    function seekVideo() {
+        seekbar.currentTime = seekbar.value;
+    }
+
+    function setupSeekbar() {
+        console.log('durationchange')
+        seekbar.max = player.duration;
+    }
+
+    function playVideo(evt) {
+        console.log(this);
+        if (player.paused) {
+            player.play();
+            btnPlay.innerText='pause'
+        } else {
+                player.pause();
+                btnPlay.innerText='play'
+        }
+    }
+
+    function stopVideo(evt) {
+        player.currentTime = 0;
+    }
+    function adjustSpeed(evt) {
+        console.log(evt.target.value);
+        const currentPlaybackRate = evt.target.value;
+        speed.innerHTML=`${currentPlaybackRate}X`;
+        player.playbackRate = currentPlaybackRate;
+    }
+</script>
+</body>
+</html>

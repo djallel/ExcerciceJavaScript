@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+<body>
+regardes la consoles
+<script>
+
+    const numbers = [1, 2, 3, 4, 5];
+    let reducedNumbers = numbers.reduce((accumulateur,currrent)=> {
+        return accumulateur+currrent;
+    },0);
+    console.log("reducedNumbers "+reducedNumbers );
+
+    let reducedNumbers2 =[0, 1, 2, 3, 4].reduce(function(accumulateur, valeurCourante, index, array){
+        return accumulateur + valeurCourante;
+    });
+
+    console.log("reducedNumbers2 "+reducedNumbers2 );
+
+    //Additionner les valeurs d'une propriétés pour un tableau d'objets
+    //Pour additionner les valeurs d'une propriété donnée des objets d'un tableau, il sera nécessaire de fournir une valeur initiale afin que tous les éléments soient parcourus :
+    var valeurInitiale = 0;
+    var somme = [{x: 1}, {x:2}, {x:3}].reduce( (accumulateur, valeurCourante) => {
+        return accumulateur + valeurCourante.x;
+    }, valeurInitiale);
+
+    console.log('somme ' +somme); // affiche 6 dans la console
+
+
+    //Aplatir une liste de listes
+    var applati = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+        console.log(a.concat(b))
+        return a.concat(b);
+    });
+    console("applati "+applati.valueOf())
+    // applati vaut [0, 1, 2, 3, 4, 5]
+
+
+    //Utiliser le paramètre valeurInitiale
+    var amis = [
+        { "nom": "Quentin", "livres": ["City Hall", "Harry Potter"]},
+        { "nom": "Alice", "livres": ["L'Avare", "Les Fleurs du Mal"]}
+    ]
+
+    var tousLivres = amis.reduce(function(prev, curr) {
+        return [...prev, ...curr.livres];
+    }, ["Perceval"]);
+
+    // tousLivres = ["Perceval", "City Hall", "Harry Potter",  "L'Avare", "Les Fleurs du Mal"]
+    //
+</script>
+</body>
+</html>
