@@ -14,10 +14,25 @@
         this.color=color;
     }
 
-    const vehicule1= Vehicule("Renault", "Clio","rouge");
-    const vehicule2= Vehicule("Peugeot", "207","grise");
+    const vehicule1= new Vehicule("Renault", "Clio","rouge");
+    const vehicule2= new Vehicule("Peugeot", "207","grise");
+    const vehicule3= new Vehicule("Volswagen", "golf","noir");
 
-    vehicule1
+    Vehicule.prototype.country ='France'
+    console.log('Vehicule.prototype',Vehicule.prototype)
+    console.log('vehicule1.__proto__',vehicule1.__proto__)
+    console.log('vehicule2.__proto__',vehicule2.__proto__)
+
+
+    console.log('keys de vehicule 1', Object.keys(vehicule1))
+    console.log('vehicule1.country',vehicule1.country)
+    console.log('vehicule3.country',vehicule3.country)
+
+    Vehicule.prototype.country ='Allemagne'
+    console.log('vehicule1.country',vehicule1.country)
+    console.log('vehicule3.__proto__',vehicule3.__proto__)
+    console.log('keys de vehicule 3', Object.keys(vehicule3))
+    console.log('vehicule3.country',vehicule3.country)
 
 </script>
 
