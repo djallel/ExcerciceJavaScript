@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body onload="load()">
+<button id="test0">Test 0</button>
+<button id="test1">Test 1</button>
+<button id="test2">Test 2</button>
+</body>
+
+<script>
+/*    function load() {
+        for (var i=0 ; i < 2 ; i++) {
+            var el = document.getElementById('test' + i);
+            el.addEventListener("click", () => {
+                console.log(i);
+            }, false);
+        }
+    }*/
+
+function click(i) {
+    var el = document.getElementById('test' + i);
+    el.addEventListener("click", () => {
+        console.log(i);
+    }, false);
+}
+function load() {
+    for (var i=0 ; i < 2 ; i++) {
+        click(i);
+    }
+}
+</script>
+</html>
