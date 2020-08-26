@@ -9,9 +9,9 @@ import {MatIconRegistry} from '@angular/material/icon';
 })
 export class AppComponent {
   title = 'my-first-project';
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'thumbs-up',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/thumb_up.svg'));
+  hidden = false;
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
   }
 }
