@@ -11,23 +11,29 @@ import { ButtonComponent } from './button/button.component';
 import {MatDividerModule} from "@angular/material/divider";
 import { ToggleButtonComponent } from './toggle-button/toggle-button.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatIconModule} from "@angular/material/icon";
+import { HttpClientModule } from "@angular/common/http";
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TypographyComponent,
     ButtonComponent,
-    ToggleButtonComponent
+    ToggleButtonComponent,
+    IconComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatSliderModule,
-    MatDividerModule,
-    MatButtonToggleModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatSliderModule,
+        MatDividerModule,
+        MatButtonToggleModule,
+        MatIconModule,
+      HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
