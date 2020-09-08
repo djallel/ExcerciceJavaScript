@@ -1,36 +1,33 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
-<mat-vertical-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+<mat-vertical-stepper>
+  <mat-step label="Profil">
+    <p>ici je vais mettre le profil</p>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+  <mat-step label="Compétence technique">
+    <p>ici je vais mettre le tableau des compétences</p>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
+  <mat-step label="Compétence Fonctionnelle">
+    <p>ici je vais mettre le tableau des compétences fonctionnelle</p>
+  </mat-step>
+  <mat-step label="Expérience professionnelle">
+    <p>ici je vais mettre d'autre stepper</p>
+    <mat-vertical-stepper>
+      <mat-step label="izyfree"></mat-step>
+      <mat-step label="gfi"></mat-step>
+      <mat-step label="umanis"></mat-step>
+    </mat-vertical-stepper>
+  </mat-step>
+  <mat-step label="Formation et certification">
+    <p>ici je vais mettre le tableau des "Formation et certification"</p>
+  </mat-step>
+  <mat-step label="Diplôme">
+    <p>ici je vais mettre le tableau des Diplômes</p>
+  </mat-step>
+  <mat-step label="Centre d'interet ">
+    <ul>
+      <li>Musculation</li>
+      <li>Bricolage</li>
+      <li>Maçonnerie</li>
+      <li>Mécanique</li>
+    </ul>
   </mat-step>
 </mat-vertical-stepper>
