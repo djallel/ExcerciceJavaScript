@@ -4,15 +4,25 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CompetenceTechniqueComponent } from './competence-technique/competence-technique.component';
+import { StepperComponent } from './stepper/stepper.component';
+import {MatStepperModule} from "@angular/material/stepper";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompetenceTechniqueComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
