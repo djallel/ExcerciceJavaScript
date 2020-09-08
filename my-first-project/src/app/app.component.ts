@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +7,14 @@ import {MatIconRegistry} from '@angular/material/icon';
 })
 export class AppComponent {
   title = 'my-first-project';
-  hidden = false;
 
-  toggleBadgeVisibility() {
-    this.hidden = !this.hidden;
+  showSpinner=false;
+
+  loadData(){
+    this.showSpinner=true;
+    setTimeout(()=>this.showSpinner=false,5*1000)
   }
+
+
+
 }

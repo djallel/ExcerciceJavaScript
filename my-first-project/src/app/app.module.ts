@@ -16,6 +16,13 @@ import { HttpClientModule } from "@angular/common/http";
 import { IconComponent } from './icon/icon.component';
 import { BadgeComponent } from './badge/badge.component';
 import {MatBadgeModule} from "@angular/material/badge";
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +31,10 @@ import {MatBadgeModule} from "@angular/material/badge";
     ButtonComponent,
     ToggleButtonComponent,
     IconComponent,
-    BadgeComponent
+    BadgeComponent,
+    ProgressSpinnerComponent,
+    SidenavComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +46,11 @@ import {MatBadgeModule} from "@angular/material/badge";
     MatButtonToggleModule,
     MatIconModule,
     HttpClientModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
