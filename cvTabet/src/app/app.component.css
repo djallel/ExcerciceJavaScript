@@ -1,0 +1,12 @@
+#Global
+{
+  width:100%;
+}
+#gauche
+{
+  justify-content: flex-start;
+}
+#droite
+{
+  justify-content: right;
+}

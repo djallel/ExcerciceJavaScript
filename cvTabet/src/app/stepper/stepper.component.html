@@ -1,12 +1,26 @@
 <mat-vertical-stepper>
   <mat-step label="Profil">
     <p>ici je vais mettre le profil</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
   <mat-step label="Compétence technique">
-    <p>ici je vais mettre le tableau des compétences</p>
+    <div>
+      <app-competence-technique>app compétence tehcnique</app-competence-technique>
+    </div>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
   <mat-step label="Compétence Fonctionnelle">
     <p>ici je vais mettre le tableau des compétences fonctionnelle</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
   <mat-step label="Expérience professionnelle">
     <p>ici je vais mettre d'autre stepper</p>
@@ -18,9 +32,17 @@
   </mat-step>
   <mat-step label="Formation et certification">
     <p>ici je vais mettre le tableau des "Formation et certification"</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
   <mat-step label="Diplôme">
     <p>ici je vais mettre le tableau des Diplômes</p>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
   <mat-step label="Centre d'interet ">
     <ul>
@@ -29,5 +51,8 @@
       <li>Maçonnerie</li>
       <li>Mécanique</li>
     </ul>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+    </div>
   </mat-step>
 </mat-vertical-stepper>

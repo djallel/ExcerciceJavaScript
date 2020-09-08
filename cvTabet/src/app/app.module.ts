@@ -10,12 +10,18 @@ import {MatStepperModule} from "@angular/material/stepper";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTableModule} from "@angular/material/table";
+import { EnteteDuCvComponent } from './entete-du-cv/entete-du-cv.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     CompetenceTechniqueComponent,
-    StepperComponent
+    StepperComponent,
+    EnteteDuCvComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,11 @@ import {MatInputModule} from "@angular/material/input";
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
