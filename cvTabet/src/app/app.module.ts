@@ -15,13 +15,17 @@ import {MatTableModule} from "@angular/material/table";
 import { EnteteDuCvComponent } from './entete-du-cv/entete-du-cv.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
+import { PhotoCardComponent } from './photo-card/photo-card.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompetenceTechniqueComponent,
     StepperComponent,
-    EnteteDuCvComponent
+    EnteteDuCvComponent,
+    PhotoCardComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
