@@ -1,3 +1,5 @@
+<mat-horizontal-stepper>
+  <mat-step label="Profil">
 <mat-grid-list cols="3">
   <mat-grid-tile>
     <app-contact></app-contact>
@@ -9,5 +11,11 @@
     <app-entete-du-cv></app-entete-du-cv>
   </mat-grid-tile>
 </mat-grid-list>
-<app-stepper></app-stepper>
+    <app-stepper></app-stepper>
+  </mat-step>
+  <mat-step label="Expérience pro">
+    <app-stepper-horizontal></app-stepper-horizontal>
+  </mat-step>
+</mat-horizontal-stepper>
+
 

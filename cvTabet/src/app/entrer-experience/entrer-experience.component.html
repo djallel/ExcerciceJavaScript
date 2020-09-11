@@ -1,0 +1,29 @@
+<ng-form class="example-form">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Du</mat-label>
+    <input matInput [matDatepicker]="picker1" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Au</mat-label>
+    <input matInput [matDatepicker]="picker2"
+           [formControl]="serializedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Entreprise</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Taches</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+
+  <app-list-techno></app-list-techno>
+</ng-form>
