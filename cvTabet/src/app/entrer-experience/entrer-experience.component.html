@@ -26,4 +26,7 @@
   </mat-form-field>
 
   <app-list-techno></app-list-techno>
+  <button mat-raised-button [disabled]="!allowNewServer">Enregistrer l'expérience</button>
+  <button mat-raised-button [disabled]="disableButton()">Enregistrer l'expérience disableButton</button>
+  <p>toto {{allowNewServer}}</p>
 </ng-form>

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cvTabet';
+  names = ['theresea','Morris','Duane','Taz']
 }

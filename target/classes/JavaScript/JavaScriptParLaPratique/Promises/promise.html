@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+Promises
+Regardes la consoles
+
+<script>
+    console.log("je vais à l'entretien");
+
+    const myJobPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+                resolve('bravo, vous êtes pris');
+                reject('désolé, bonne chance pour la suite');
+            }
+            , 2 * 1000);
+    }).then((data) => {
+        console.log(data);
+    },(data2)=> {
+        console.log(data2)
+    }).then(() => {
+        console.log("coucou")
+        throw new Error("error");
+        console.log("coucou2")
+    }).then(()=>{
+        console.log('avant le catch')
+    }).catch(()=>{
+        console.log("catch")
+    }).then(()=>{
+        console.log('après le catch')
+    }).then(()=>{
+        console.log( '2e then après le catch')
+    })
+
+    console.log('Je retourne vivre ma vie');
+
+    myJobPromise.then((data) => {
+        console.log('2e 3 then apres le catch');
+        console.log(data);
+    },(data2)=>{
+        console.log(data2)
+    })
+</script>
+</body>
+</html>

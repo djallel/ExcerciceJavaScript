@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+ouvres la console
+
+<button id="btnStart">Start</button>
+<script>
+
+    const btnStart = document.getElementById("btnStart");
+
+    function start() {
+        console.log("dans start function ", this)
+    }
+
+    btnStart.addEventListener("click", start);
+
+
+    console.log("this dans <script", this);
+
+    class Vehicule {
+        constructor(brand, model, color) {
+            console.log("this dans constructor de Vehicule", this);
+            console.log('dans le constructeur de la class vehicule');
+            this.brand = brand;
+            this.model = model;
+            this.color = color;
+        }
+    }
+
+    class Bike extends Vehicule {
+        constructor(brand, model, color, fullPowered, exhaustPipeBrand) {
+            console.log('dans le constructeur de la class Bike');
+            super(brand, model, color);
+            console.log("this dans constructor de Bike", this);
+            this.fullPowered = fullPowered;
+            this.exhaustPipeBrand = exhaustPipeBrand;
+
+        }
+    }
+
+    const zx6r = new Bike('Kawazakie', "404", "rouge", true, "torissmo")
+
+    const cessna = {
+        model: '152',
+        isFlying: false,
+        takeOff: function () {
+            this.isFlying = true;
+            console.log("dans la function takeOff", this)
+        }
+    }
+
+    console.log(cessna.takeOff())
+
+    // utiliser self
+    const barman = {
+        nom: "djalal",
+        bottles: ['coca', 'pepsi', 'eau'],
+        infomIsOpen: function (botle) {
+            console.log(botle + "à été ouverte ");
+            console.log("dans la function infomIsOpen", this)
+        },
+        openBottles: function () {
+            var self = this; // pour éviter les pb de this lié à javascript
+            console.log('this depuis la function openBottles', this)
+            this.bottles.forEach(function (bottle) {
+                console.log('this depuis le callback de this.bottles.forEach ', this)
+                self.infomIsOpen(bottle);
+            });
+        }
+    };
+
+    barman.infomIsOpen();
+    barman.openBottles();
+
+
+    // utiliser arrow function
+
+    const barmanArrowFunction = {
+        nom: "djalal",
+        bottles: ['coca', 'pepsi', 'eau'],
+        infomIsOpen: function (botle) {
+            console.log(botle + "à été ouverte ");
+            console.log("dans la function infomIsOpen", this)
+        },
+        openBottles: function () {
+            console.log('this depuis la function openBottles', this)
+            this.bottles.forEach(bottle => {
+                console.log('this depuis le callback de this.bottles.forEach ', this)
+                this.infomIsOpen(bottle);
+            });
+        }
+    };
+
+    barmanArrowFunction.infomIsOpen();
+    barmanArrowFunction.openBottles();
+
+
+    // Choisir ce que doit être this dans la function avec un 'call'
+
+    user1 = {
+        civility: "M.",
+        name: {
+            first: "djalal",
+            last: "tabet"
+        }
+    }
+
+    user2 = {
+        civility: "Mme",
+        name: {
+            first: "maria",
+            last: "tabet"
+        }
+    }
+
+    course1 = {
+        title: "cours 1",
+        duration: "1 semaine"
+    }
+
+    course2 = {
+        title: "cours 2",
+        duration: "2 semaine"
+    }
+
+
+    function register(course) {
+        console.log("dans la function register",this, course);
+        const message = `${this.civility} ${this.name.first}, vous êtes  bien enregistré${this.civility === "Mme" ? "e" : ""} au cours de ${course.title}`;
+        console.log(message);
+    }
+
+    register.call(user1, course1) // user1 corresponds à l'argument this ==> c'est comme ça qu'on contrôle quoi mettre dans le this
+
+
+    // Choisir ce que doit être this dans la function avec un 'bind'
+
+    djalalRegister = register.bind(user1)
+    mariaRegister = register.bind(user2)
+
+    console.log("djalalRegister",djalalRegister);
+    console.log('mariaRegister',mariaRegister);
+
+    djalalRegister(course1);
+    mariaRegister(course2);
+
+
+</script>
+</body>
+</html>

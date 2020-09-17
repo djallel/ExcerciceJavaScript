@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+ouvres la console
+<script>
+
+
+    var vehicul = {
+        id : 1,
+        brand : "Renault",
+        model : "Clio",
+        color : "grise",
+        honk : function () {
+            console.log("tuuute")
+        }
+
+    }
+    // methode keys
+    const res = Object.keys(vehicul); // keys est une methode statique
+    res.map((item ) => {
+        console.log(`voici la clé : ${item}`) ; // ici on affiche toutes les clés
+    });
+
+    vehicul.honk();
+
+    console.log(res);
+
+    // getter Setter
+   Object.defineProperty(vehicul,'summary',{  // on crée une proprité summury sur l'objet vehicul.
+    get : function () {
+        return `Vehicul ${this.brand}
+        de type ${this.model}
+        de couleur ${this.color}`;
+    },
+       set : function (value) {
+            const caracterics = value.split(',');
+            vehicul.brand = caracterics[0];
+            vehicul.model = caracterics[1];
+            vehicul.color = caracterics[2];
+       }
+   });
+
+    // fais un get
+    console.log(vehicul.summary);
+    // fais un set
+    vehicul.summary='Peugeot, 206, rouge';
+    console.log(vehicul.summary)
+
+
+
+    // getter Setter sans : function 2e facon de faire
+    Object.defineProperty(vehicul,'summary2',{  // on crée une proprité summury sur l'objet vehicul.
+        get() {
+            return `Vehicul ${this.brand}
+        de type ${this.model}
+        de couleur ${this.color}`;
+        },
+        set(value) {
+            const caracterics = value.split(',');
+            vehicul.brand = caracterics[0];
+            vehicul.model = caracterics[1];
+            vehicul.color = caracterics[2];
+        }
+    });
+
+    // fais un get
+    console.log(vehicul.summary2);
+    // fais un set
+    vehicul.summary='Peugeot-2, 206-2, rouge-2';
+    console.log(vehicul.summary2)
+
+    //3e façon de faire ==> get avec un nom
+
+    const obj = {
+        log: ['a', 'b', 'c'],
+        get latest() {
+            if (this.log.length === 0) {
+                return undefined;
+            }
+            return this.log[this.log.length - 1];
+        }
+    };
+
+    console.log(obj.latest);
+    // expected output: "c"
+
+
+
+    // Copie d'objet
+    const person = {id : 1, name: "tabet" , lastname : "djalal", poste : "inventeur"};
+    // Copie d'objet avec assign
+    const person2= Object.assign({},person, {job : "technicien", age : "46"});
+    //Copie d'objet avec spread opérateur
+    const person3= {...person};
+    //Copie d'objet avec JSON.parse
+    const person4= JSON.parse(JSON.stringify(person));
+
+
+
+    console.log(person);
+    console.log(person2);
+    console.log(person3);
+    console.log(person4);
+
+
+    // Object Assign avec un element en commun
+
+    const target = { a: 1, b: 2 };
+    const source = { b: 4, c: 5 };
+
+    const returnedTarget = Object.assign(target, source);
+
+    console.log(target);
+    // expected output: Object { a: 1, b: 4, c: 5 }
+
+    console.log(returnedTarget);
+    // expected output: Object { a: 1, b: 4, c: 5 }
+
+
+    //constructeur
+    function vehiculeAvecConstructeur(brand,type,color) {
+        this.brand = brand;
+        this.type = type;
+        this.color = color;
+
+    }
+
+    console.log(new vehiculeAvecConstructeur("ferrari","52","rouge"));
+
+</script>
+</body>
+</html>

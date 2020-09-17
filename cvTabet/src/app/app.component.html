@@ -18,4 +18,11 @@
   </mat-step>
 </mat-horizontal-stepper>
 
+<div *ngFor="let name of names">
+  <div *ngIf="name.length > 6">{{name}}
+
+  <div *ngIf="name.length > 6">{{name.length}}</div>
+</div>
+</div>
+
 
