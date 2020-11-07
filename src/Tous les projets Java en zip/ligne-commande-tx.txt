@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=fr.zaroumia.formation.spring -DartifactId=exercice-spring-tx -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

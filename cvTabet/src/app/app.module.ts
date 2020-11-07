@@ -38,6 +38,21 @@ import { FeuilleDeRouteComponent } from './feuille-de-route/feuille-de-route.com
 import { ResumeComponent } from './resume/resume.component';
 import { GererComponent } from './gerer/gerer.component';
 
+import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes, Router } from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
+
+const routes: Routes = [
+  { path: "", component: HomeComponent },
+  { path: "MonAffichage", component: MonAffichageComponent },
+  { path: "AfficherLesAnomalies", component: AfficherAnomalieComponent },
+  { path: "HistoriqueDesChangements", component: HistoriqueDesChangementsComponent },
+  { path: "FeuilleDeRoute", component: FeuilleDeRouteComponent },
+  { path: "Resume", component: ResumeComponent },
+  { path: "Gerer", component: GererComponent },
+  { path: "CV", component: CvComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +71,8 @@ import { GererComponent } from './gerer/gerer.component';
     HistoriqueDesChangementsComponent,
     FeuilleDeRouteComponent,
     ResumeComponent,
-    GererComponent
+    GererComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +95,9 @@ import { GererComponent } from './gerer/gerer.component';
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    // HttpClientModule,
+    RouterModule.forRoot(routes)
 
   ],
   providers: [],
