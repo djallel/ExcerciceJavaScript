@@ -25,6 +25,18 @@ import { ListTechnoComponent } from './list-techno/list-techno.component';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatIconModule} from "@angular/material/icon";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { CvComponent } from './cv/cv.component';
+import { MonAffichageComponent } from './mon-affichage/mon-affichage.component';
+import { AfficherAnomalieComponent } from './afficher-anomalie/afficher-anomalie.component';
+import { HistoriqueDesChangementsComponent } from './historique-des-changements/historique-des-changements.component';
+import { FeuilleDeRouteComponent } from './feuille-de-route/feuille-de-route.component';
+import { ResumeComponent } from './resume/resume.component';
+import { GererComponent } from './gerer/gerer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +48,15 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     ContactComponent,
     StepperHorizontalComponent,
     EntrerExperienceComponent,
-    ListTechnoComponent
+    ListTechnoComponent,
+    MainNavComponent,
+    CvComponent,
+    MonAffichageComponent,
+    AfficherAnomalieComponent,
+    HistoriqueDesChangementsComponent,
+    FeuilleDeRouteComponent,
+    ResumeComponent,
+    GererComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +75,11 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     MatNativeDateModule,
     MatChipsModule,
     MatIconModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
 
   ],
   providers: [],

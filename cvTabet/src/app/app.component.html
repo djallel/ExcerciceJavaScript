@@ -1,28 +1,5 @@
-<mat-horizontal-stepper>
-  <mat-step label="Profil">
-<mat-grid-list cols="3">
-  <mat-grid-tile>
-    <app-contact></app-contact>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <app-photo-card></app-photo-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <app-entete-du-cv></app-entete-du-cv>
-  </mat-grid-tile>
-</mat-grid-list>
-    <app-stepper></app-stepper>
-  </mat-step>
-  <mat-step label="Expérience pro">
-    <app-stepper-horizontal></app-stepper-horizontal>
-  </mat-step>
-</mat-horizontal-stepper>
+<!--<app-cv></app-cv>-->
 
-<div *ngFor="let name of names">
-  <div *ngIf="name.length > 6">{{name}}
-
-  <div *ngIf="name.length > 6">{{name.length}}</div>
-</div>
-</div>
+<app-main-nav></app-main-nav>
 
 
