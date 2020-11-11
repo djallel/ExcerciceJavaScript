@@ -41,6 +41,9 @@ import { GererComponent } from './gerer/gerer.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes, Router } from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { TableFilteringExampleComponent } from './table-filtering-example/table-filtering-example.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -50,7 +53,8 @@ const routes: Routes = [
   { path: "FeuilleDeRoute", component: FeuilleDeRouteComponent },
   { path: "Resume", component: ResumeComponent },
   { path: "Gerer", component: GererComponent },
-  { path: "CV", component: CvComponent }
+  { path: "CV", component: CvComponent },
+  { path: "Table", component: TableFilteringExampleComponent }
 ];
 
 @NgModule({
@@ -72,7 +76,9 @@ const routes: Routes = [
     FeuilleDeRouteComponent,
     ResumeComponent,
     GererComponent,
-    HomeComponent
+    HomeComponent,
+    MyDashboardComponent,
+    TableFilteringExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -96,8 +102,9 @@ const routes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    // HttpClientModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    MatMenuModule
 
   ],
   providers: [],
