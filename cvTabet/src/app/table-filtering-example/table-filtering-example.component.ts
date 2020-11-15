@@ -3,7 +3,6 @@ import {MatTableDataSource} from '@angular/material/table';
 import {PeriodicElement} from "../Model/PeriodicElement";
 import {TableFiltringService} from "../table-filtring.service";
 
-
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -21,6 +20,7 @@ function getPeriodicElement() {
   return ELEMENT_DATA;
 }
 
+
 /**
  * @title Table with filtering
  */
@@ -31,25 +31,19 @@ function getPeriodicElement() {
 })
 export class TableFilteringExampleComponent implements OnInit {
 
-  // public element_data: PeriodicElement[] = [];
   element_data1: PeriodicElement[] = [];
 
   constructor(private tablefilteringService : TableFiltringService) { }
 
-
   ngOnInit(): void {
-    // this.getPeriodicElementHTTpClient()
-    this.tablefilteringService.getPeriodicElement().subscribe((data) => {this.element_data1 = data});
+    this.tablefilteringService.getPeriodicElements().subscribe((data) => {
+      this.element_data1 = data
+      this.dataSource = new MatTableDataSource(this.element_data1);
+    });
   }
 
-  /* getPeriodicElementHTTpClient() : PeriodicElement[] {
-       this.tablefilteringService.getPeriodicElement().subscribe((data) => {this.element_data1 = data
-       return data});
-  }*/
-
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(getPeriodicElement());
-  // dataSource = new MatTableDataSource(this.getPeriodicElementHTTpClient());
+  dataSource: MatTableDataSource<PeriodicElement>;
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

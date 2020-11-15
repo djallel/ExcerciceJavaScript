@@ -26,9 +26,9 @@ export class TableFiltringService {
     {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'}
   ];
 
-   getPeriodicElement() : Observable<PeriodicElement[]>{
+   getPeriodicElements() : Observable<any>{
     // return this.ELEMENT_DATA;
-     return this.http.get<PeriodicElement[]>(this._url)
+     return this.http.get(this._url)
   }
 
 }
