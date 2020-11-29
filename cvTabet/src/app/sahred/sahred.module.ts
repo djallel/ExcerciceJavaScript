@@ -7,6 +7,13 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
+import {RouterModule} from "@angular/router";
+import {MatListModule} from "@angular/material/list";
+import { AreaComponent } from './widgets/area/area.component';
+import {HighchartsChartModule} from "highcharts-angular";
+import {DashboardComponent} from "../modules/dashboard/dashboard.component";
+import { CardComponent } from './widgets/card/card.component';
+import { PieComponent } from './widgets/pie/pie.component';
 
 
 
@@ -14,19 +21,28 @@ import {MatMenuModule} from "@angular/material/menu";
   declarations: [
     FooterComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    AreaComponent,
+    CardComponent,
+    PieComponent
   ],
   imports: [
     CommonModule,
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule,
+    MatListModule,
+    HighchartsChartModule
   ]
 })
 export class SahredModule { }

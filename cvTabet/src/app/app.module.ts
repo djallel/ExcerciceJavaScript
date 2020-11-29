@@ -45,64 +45,67 @@ import {MyDashboardComponent} from './my-dashboard/my-dashboard.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {TableFilteringExampleComponent} from './table-filtering-example/table-filtering-example.component';
 import {DefaultModule} from "./layouts/default/default.module";
-import {SahredModule} from "./sahred/sahred.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CompetenceTechniqueComponent,
-    StepperComponent,
-    EnteteDuCvComponent,
-    PhotoCardComponent,
-    ContactComponent,
-    StepperHorizontalComponent,
-    EntrerExperienceComponent,
-    ListTechnoComponent,
-    MainNavComponent,
-    CvComponent,
-    MonAffichageComponent,
-    AfficherAnomalieComponent,
-    HistoriqueDesChangementsComponent,
-    FeuilleDeRouteComponent,
-    ResumeComponent,
-    GererComponent,
-    HomeComponent,
-    MyDashboardComponent,
-    TableFilteringExampleComponent
+    declarations: [
+        AppComponent,
+        CompetenceTechniqueComponent,
+        StepperComponent,
+        EnteteDuCvComponent,
+        PhotoCardComponent,
+        ContactComponent,
+        StepperHorizontalComponent,
+        EntrerExperienceComponent,
+        ListTechnoComponent,
+        MainNavComponent,
+        CvComponent,
+        MonAffichageComponent,
+        AfficherAnomalieComponent,
+        HistoriqueDesChangementsComponent,
+        FeuilleDeRouteComponent,
+        ResumeComponent,
+        GererComponent,
+        HomeComponent,
+        MyDashboardComponent,
+        TableFilteringExampleComponent
 
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatTableModule,
-    MatGridListModule,
-    MatCardModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatChipsModule,
-    MatIconModule,
-    MatAutocompleteModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    HttpClientModule,
-    RouterModule,
-    MatMenuModule,
-    DefaultModule,
-    FlexLayoutModule
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatTableModule,
+        MatGridListModule,
+        MatCardModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatChipsModule,
+        MatIconModule,
+        MatAutocompleteModule,
+        LayoutModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        HttpClientModule,
+        RouterModule,
+        MatMenuModule,
+        DefaultModule,
+        FlexLayoutModule
 
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+    ],
+    providers: [],
+    exports: [
+        MainNavComponent
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

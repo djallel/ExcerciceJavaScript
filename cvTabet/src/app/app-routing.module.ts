@@ -14,7 +14,7 @@ import {TableFilteringExampleComponent} from "./table-filtering-example/table-fi
 import {PostsComponent} from "./modules/posts/posts.component";
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
+  {path: "HomeComponent", component: HomeComponent},
   {path: "MonAffichage", component: MonAffichageComponent},
   {path: "AfficherLesAnomalies", component: AfficherAnomalieComponent},
   {path: "HistoriqueDesChangements", component: HistoriqueDesChangementsComponent},
@@ -23,9 +23,9 @@ const routes: Routes = [
   {path: "Gerer", component: GererComponent},
   {path: "CV", component: CvComponent},
   {
-    path: "Default", component: DefaultComponent,
+    path: "", component: DefaultComponent,
     children: [
-      {path: "Dashboard", component: DashboardComponent},
+      {path: "", component: DashboardComponent},
       {path: "Posts", component: PostsComponent}
     ]
   },
