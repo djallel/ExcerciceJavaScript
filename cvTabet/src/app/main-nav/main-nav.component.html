@@ -5,6 +5,17 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <div class="profile-card">
+        <div class="header">
+          <h2>TABET Djalal</h2>
+          <h4>b_tabet@esi.dz</h4>
+        </div>
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader>Pages</h2>
       <a mat-list-item routerLink="/MonAffichage">Mon affichage</a>
       <a mat-list-item routerLink="/AfficherLesAnomalies">Afficher les anomalies</a>
       <a mat-list-item routerLink="/HistoriqueDesChangements">Historique des changements</a>
@@ -14,6 +25,24 @@
       <a mat-list-item routerLink="/CV">CV</a>
       <a mat-list-item routerLink="/Table">Table avec filtre</a>
       <a mat-list-item routerLink="/">Default</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/Posts">Posts</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/Articles">Articles</a>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader>Tools</h2>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>import_contacts</mat-icon>
+        Contacts
+      </a>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+        <mat-icon>contact_phone</mat-icon>
+        Leads
+      </a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -59,3 +88,4 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 
+<app-footer></app-footer>

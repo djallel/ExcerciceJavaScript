@@ -46,6 +46,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {TableFilteringExampleComponent} from './table-filtering-example/table-filtering-example.component';
 import {DefaultModule} from "./layouts/default/default.module";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {SahredModule} from "./sahred/sahred.module";
 
 @NgModule({
     declarations: [
@@ -71,36 +72,37 @@ import {FlexLayoutModule} from "@angular/flex-layout";
         TableFilteringExampleComponent
 
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatStepperModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatTableModule,
-        MatGridListModule,
-        MatCardModule,
-        FormsModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatChipsModule,
-        MatIconModule,
-        MatAutocompleteModule,
-        LayoutModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatListModule,
-        HttpClientModule,
-        RouterModule,
-        MatMenuModule,
-        DefaultModule,
-        FlexLayoutModule
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule,
+    MatGridListModule,
+    MatCardModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatChipsModule,
+    MatIconModule,
+    MatAutocompleteModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    HttpClientModule,
+    RouterModule,
+    MatMenuModule,
+    DefaultModule,
+    FlexLayoutModule,
+    SahredModule
 
 
-    ],
+  ],
     providers: [],
     exports: [
         MainNavComponent
