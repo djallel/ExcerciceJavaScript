@@ -1,0 +1,7 @@
+com\zaroumia\batch\BatchConfigTest.class
+com\zaroumia\batch\BaseTest.class
+com\zaroumia\batch\PlanningStepConfigTest.class
+com\zaroumia\batch\ConfigurationForTest.class
+com\zaroumia\batch\ChargementSeancesStepConfigTest.class
+com\zaroumia\batch\ChargementFormateursStepConfigTest.class
+com\zaroumia\batch\ChargementFormationsStepConfigTest.class
