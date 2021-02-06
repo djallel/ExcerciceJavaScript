@@ -22,3 +22,7 @@ Port number: 3306
 aller dans fakeSMTP
 cd C:\FORMATION\ExerciceJavaScript\ExcerciceJavaScript\src\main\java\SpringBatchParLaPratique\formations-batch-master\FakeSMTP\FakeSMTP-master
 executer la commade maven
+
+===================================
+cd C:\FORMATION\ExerciceJavaScript\ExcerciceJavaScript\src\main\java\SpringBatchParLaPratique\formations-batch-master
+mvn clean install
