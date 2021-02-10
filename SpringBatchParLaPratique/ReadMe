@@ -1,0 +1,24 @@
+bdd root/root
+
+Your account number is: 488620
+
+Your new database is now ready to use.
+
+To connect to your database use these details
+
+Server: sql7.freemysqlhosting.net
+Name: sql7391231
+Username: sql7391231
+Password: 2HYKtAWeTb
+Port number: 3306
+
+=======================
+aller dans fakeSMTP
+cd C:\FORMATION\ExerciceJavaScript\ExcerciceJavaScript\FakeSMTP
+mvn clean install -DskipTests
+mvn package
+java -jar target/fakeSMTP-2.1-SNAPSHOT.jar
+
+===================================
+cd C:\FORMATION\ExerciceJavaScript\ExcerciceJavaScript\SpringBatchParLaPratique
+mvn clean install -DskipTests

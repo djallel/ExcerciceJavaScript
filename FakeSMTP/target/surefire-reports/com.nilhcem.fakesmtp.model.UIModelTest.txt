@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.nilhcem.fakesmtp.model.UIModelTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.291 sec <<< FAILURE!
-testInvalidHost(com.nilhcem.fakesmtp.model.UIModelTest)  Time elapsed: 2.287 sec  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.282 sec <<< FAILURE!
+testInvalidHost(com.nilhcem.fakesmtp.model.UIModelTest)  Time elapsed: 2.276 sec  <<< ERROR!
 java.lang.Exception: Unexpected exception, expected<com.nilhcem.fakesmtp.core.exception.InvalidHostException> but was<java.lang.IllegalStateException>
 	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)

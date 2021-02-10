@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.nilhcem.fakesmtp.core.ConfigurationTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="com.nilhcem.fakesmtp.core.ConfigurationTest" time="0.006" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -60,7 +60,7 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.nilhcem.fakesmtp.core.ConfigurationTest" name="getEmptyValueWhenKeyIsNotFound" time="0.009"/>
+  <testcase classname="com.nilhcem.fakesmtp.core.ConfigurationTest" name="getEmptyValueWhenKeyIsNotFound" time="0.006"/>
   <testcase classname="com.nilhcem.fakesmtp.core.ConfigurationTest" name="uniqueInstance" time="0"/>
   <testcase classname="com.nilhcem.fakesmtp.core.ConfigurationTest" name="getValueWhenKeyIsFound" time="0"/>
 </testsuite>

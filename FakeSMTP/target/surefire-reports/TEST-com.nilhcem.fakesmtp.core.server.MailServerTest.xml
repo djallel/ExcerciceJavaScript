@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.nilhcem.fakesmtp.core.server.MailServerTest" time="0.012" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.nilhcem.fakesmtp.core.server.MailServerTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
@@ -61,5 +61,5 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="com.nilhcem.fakesmtp.core.server.MailServerTest" name="testGetLock" time="0"/>
-  <testcase classname="com.nilhcem.fakesmtp.core.server.MailServerTest" name="testSaveDeleteEmail" time="0.012"/>
+  <testcase classname="com.nilhcem.fakesmtp.core.server.MailServerTest" name="testSaveDeleteEmail" time="0.011"/>
 </testsuite>
