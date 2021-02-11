@@ -25,6 +25,7 @@
         <module>SpringBatchParLaPratique</module>
         <module>FakeSMTP</module>
         <module>FakeSMTP</module>
+        <module>JavaBasic</module>
     </modules>
     <properties>
         <slf4j.version>1.6.1</slf4j.version>
