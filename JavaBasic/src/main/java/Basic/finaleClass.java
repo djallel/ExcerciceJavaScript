@@ -1,3 +1,5 @@
+package Basic;
+
 public class finaleClass {
 
      int maxi = 5;
