@@ -1,3 +1,5 @@
+package Basic;
+
 public class BreakContinue {
 
     static void ContinueBreakAvecLabel(){

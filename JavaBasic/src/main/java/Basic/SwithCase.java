@@ -1,3 +1,5 @@
+package Basic;
+
 public class SwithCase {
 
     private static int nb = 5;

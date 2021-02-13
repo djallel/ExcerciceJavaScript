@@ -1,3 +1,5 @@
+package Basic;
+
 public class BoucleWhile {
 
     public static void main(String... args) {

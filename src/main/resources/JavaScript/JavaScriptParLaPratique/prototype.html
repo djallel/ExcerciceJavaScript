@@ -8,18 +8,18 @@
 
 <script>
 
-    function Vehicule(brand, model, color) {
+    function Basic.Vehicule(brand, model, color) {
         this.brand= brand;
         this.model=model;
         this.color=color;
     }
 
-    const vehicule1= new Vehicule("Renault", "Clio","rouge");
-    const vehicule2= new Vehicule("Peugeot", "207","grise");
-    const vehicule3= new Vehicule("Volswagen", "golf","noir");
+    const vehicule1= new Basic.Vehicule("Renault", "Clio","rouge");
+    const vehicule2= new Basic.Vehicule("Peugeot", "207","grise");
+    const vehicule3= new Basic.Vehicule("Volswagen", "golf","noir");
 
-    Vehicule.prototype.country ='France'
-    console.log('Vehicule.prototype',Vehicule.prototype)
+    Basic.Vehicule.prototype.country ='France'
+    console.log('Basic.Vehicule.prototype',Basic.Vehicule.prototype)
     console.log('vehicule1.__proto__',vehicule1.__proto__)
     console.log('vehicule2.__proto__',vehicule2.__proto__)
 
@@ -28,7 +28,7 @@
     console.log('vehicule1.country',vehicule1.country)
     console.log('vehicule3.country',vehicule3.country)
 
-    Vehicule.prototype.country ='Allemagne'
+    Basic.Vehicule.prototype.country ='Allemagne'
     console.log('vehicule1.country',vehicule1.country)
     console.log('vehicule3.__proto__',vehicule3.__proto__)
     console.log('keys de vehicule 3', Object.keys(vehicule3))

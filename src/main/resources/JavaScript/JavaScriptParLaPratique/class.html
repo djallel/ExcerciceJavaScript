@@ -21,9 +21,9 @@ ouvres la console
 
     console.log("this dans <script", this);
 
-    class Vehicule {
+    class Basic.Vehicule {
         constructor(brand, model, color) {
-            console.log("this dans constructor de Vehicule", this);
+            console.log("this dans constructor de Basic.Vehicule", this);
             console.log('dans le constructeur de la class vehicule');
             this.brand = brand;
             this.model = model;
@@ -31,7 +31,7 @@ ouvres la console
         }
     }
 
-    class Bike extends Vehicule {
+    class Bike extends Basic.Vehicule {
         constructor(brand, model, color, fullPowered, exhaustPipeBrand) {
             console.log('dans le constructeur de la class Bike');
             super(brand, model, color);
