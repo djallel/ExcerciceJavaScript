@@ -26,6 +26,9 @@
         <module>FakeSMTP</module>
         <module>FakeSMTP</module>
         <module>JavaBasic</module>
+        <module>JPA</module>
+        <module>JPAPersistance</module>
+        <module>JpaDemo</module>
     </modules>
     <properties>
         <slf4j.version>1.6.1</slf4j.version>
