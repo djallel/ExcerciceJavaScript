@@ -4,3 +4,7 @@
 /node_modules/
 /src/main/java/SpringBatchParLaPratique/formations-batch/target/
 /src/main/java/SpringBatchParLaPratique/FakeSMTP/target/
+
+*.class
+
+*.iml

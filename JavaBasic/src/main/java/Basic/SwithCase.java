@@ -1,5 +1,7 @@
 package Basic;
 
+import java.util.List;
+
 public class SwithCase {
 
     private static int nb = 5;
@@ -82,8 +84,11 @@ public class SwithCase {
         System.out.println("-------------------");
 //                * 011
         System.out.println("--Debut-switchCase_nbAbsentDuCase_AvecBreak_AvecDefault----------------");
-        switchCase_nbAbsentDuCase_AvecBreak_AvecDefault();
+        //switchCase_nbAbsentDuCase_AvecBreak_AvecDefault();
         System.out.println("-------------------");
+        for (int i = 0; i < 10; i++) {
+            switchCase_nbAbsentDuCase_AvecBreak_AvecDefault(i);
+        }
 //                * 100
         System.out.println("--Debut-switchCase_nbDansCase_SansBreak_SansDefault----------------");
         switchCase_nbDansCase_SansBreak_SansDefault();
@@ -103,6 +108,8 @@ public class SwithCase {
 
 
     }
+
+
 
     private static void switchCase_nbDansCase_AvecBreak_SansDefault() {
         System.out.printf("nb est %s %n",nb );
@@ -190,8 +197,8 @@ public class SwithCase {
         }
     }
 
-    private static void switchCase_nbAbsentDuCase_AvecBreak_AvecDefault() {
-        switch (nb=0){
+    private static void switchCase_nbAbsentDuCase_AvecBreak_AvecDefault(int nbb) {
+        switch (nbb){
             case (5):
             {
                 System.out.println("5");
