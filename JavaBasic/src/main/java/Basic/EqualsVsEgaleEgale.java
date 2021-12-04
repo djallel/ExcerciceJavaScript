@@ -1,7 +1,9 @@
 package Basic;
 
 public class EqualsVsEgaleEgale {
-    public static void main(String[] args)
+ /*
+    public static void EqualsVsEgaleEgale()
+
     {
         String s1 = new String("HELLO");
         String s2 = new String("HELLO");
@@ -16,6 +18,6 @@ public class EqualsVsEgaleEgale {
          *s1.equals(s2)
          * En utilisant equal, le résultat est vrai car il ne compare que les valeurs données dans s1 et s2.
          */
-    }
+ /*   } */
 
 }

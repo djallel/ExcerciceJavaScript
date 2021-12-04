@@ -45,7 +45,7 @@ public class BreakContinue {
 // break out of loop
         System.out.println ("end of loop or exit via break");
     }
-    public static void main(String[] args) {
+    public static void main(MainClass[] args) {
 ContinueBreakSansLabel();
 //ContinueBreakAvecLabel();
     }

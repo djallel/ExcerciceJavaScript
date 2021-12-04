@@ -10,8 +10,8 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 public class Brouillon {
-
-    public static void main(String[] args) {
+/*
+    public  void Brouillon() {
        String nom= "Jean-François";
         nomCompose(nom);
 
@@ -50,4 +50,5 @@ public class Brouillon {
         }
         return result;
     }
+    */
 }

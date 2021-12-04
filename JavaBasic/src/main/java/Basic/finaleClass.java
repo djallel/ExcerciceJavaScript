@@ -4,7 +4,7 @@ public class finaleClass {
 
      int maxi = 5;
 
-    public static void main(String[] args) {
+    public static void main(MainClass[] args) {
         finaleClass fC = new finaleClass();
 
         fC.maxi = 6;

@@ -17,7 +17,7 @@ public class thisMotclé {
         return courant;
     }
 
-     public static void main(String[] args) {
+     public static void main(MainClass[] args) {
 
         incrementSansThis(20);
 

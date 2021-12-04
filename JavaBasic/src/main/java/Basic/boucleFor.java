@@ -2,7 +2,7 @@ package Basic;
 
 public class boucleFor {
 
-    public static void main(String... args) {
+    public static void main(MainClass... args) {
 
         for (int nbPlanetes = 8; nbPlanetes <= 10; nbPlanetes++) {
             switch (nbPlanetes) {

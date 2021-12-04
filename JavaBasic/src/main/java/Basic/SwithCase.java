@@ -6,7 +6,7 @@ public class SwithCase {
 
     private static int nb = 5;
 
-    public static void main(String[] args) {
+    public static void SwithCase() {
         /**
          * --Debut-switchCase_nbAbsentDuCase_SansBreak_SansDefault----------------
          * nb est 5
@@ -197,7 +197,7 @@ public class SwithCase {
         }
     }
 
-    private static void switchCase_nbAbsentDuCase_AvecBreak_AvecDefault(int nbb) {
+    public static void switchCase_nbAbsentDuCase_AvecBreak_AvecDefault(int nbb) {
         switch (nbb){
             case (5):
             {
